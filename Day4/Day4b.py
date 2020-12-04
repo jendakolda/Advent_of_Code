@@ -10,11 +10,9 @@ def validity(data):
 
 
 def valid_height(height):
-    if (height.endswith('cm') and (150 <= int(height[:-2]) <= 193)) or \
-            (height.endswith('in') and (59 <= int(height[:-2]) <= 76)):
-        return True
-    else:
-        return False
+    return (height.endswith('cm') and (150 <= int(height[:-2]) <= 193)) or \
+            (height.endswith('in') and (59 <= int(height[:-2]) <= 76))
+
 
 
 def valid_hair(hair):
