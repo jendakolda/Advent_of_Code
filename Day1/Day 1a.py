@@ -1,13 +1,13 @@
 from itertools import combinations
 
-with open('day1a_input.txt', 'r', encoding='utf-8') as expenses:
+with open('day1_input.txt', 'r', encoding='utf-8') as expenses:
     numbers = expenses.readlines()
 numbers = set(int(number.strip('\n')) for number in numbers)
 
 
 def generator1(value):
-    pairs = combinations(value, 3)
-    yield from pairs
+    combi = combinations(value, 3)
+    yield from combi
 
 
 gen1 = generator1(numbers)
